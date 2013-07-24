@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/knockout-2.2.1.js"></script>
+		<script type="text/javascript" src="js/globalize.js"></script>
+		<script type="text/javascript" src="js/dx.chartjs.js"></script>
+		<style>
+			body {
+				font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+				font-size: 8px
+			}
+			input[type="text"] {
+				font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+				font-size: 8px;
+				border: none;
+				padding: 0px;
+			}
+		</style>
+
+		<script type="text/javascript">
+			$(function() {
+				$("#sodGaugeContainer").dxLinearGauge({
+					preset : 'preset2',
+					geometry : {
+						orientation : 'vertical'
+					},
+					scale : {
+						startValue : 164,
+						endValue : 240,
+						majorTick : {
+							showCalculatedTicks : false,
+						},
+					},
+					rangeContainer : {
+						//backgroundColor : 'none',
+					},
+					markers : [{
+						value : 0,
+						color : 'black',
+						offset : -5,
+						type : 'triangle',
+						length : 20,
+						width : 15,
+					}],
+				});
+
+				$("#coenzymeGaugeContainer").dxLinearGauge({
+					preset : 'preset2',
+					geometry : {
+						orientation : 'vertical'
+					},
+					scale : {
+						startValue : 0.18,
+						endValue : 2.70,
+						majorTick : {
+							showCalculatedTicks : false,
+						},
+					},
+					rangeContainer : {
+						//backgroundColor : 'none',
+					},
+					markers : [{
+						value : 0,
+						color : 'black',
+						offset : -5,
+						type : 'triangle',
+						length : 20,
+						width : 15,
+					}],
+				});
+
+				$("#lycopeneGaugeContainer").dxLinearGauge({
+					preset : 'preset2',
+					geometry : {
+						orientation : 'vertical'
+					},
+					scale : {
+						startValue : 0.11,
+						endValue : 1.37,
+						majorTick : {
+							showCalculatedTicks : false,
+						},
+					},
+					rangeContainer : {
+						//backgroundColor : 'none',
+					},
+					markers : [{
+						value : 0,
+						color : 'black',
+						offset : -5,
+						type : 'triangle',
+						length : 20,
+						width : 15,
+					}],
+				});
+
+				$("#aCaroteneGaugeContainer").dxLinearGauge({
+					preset : 'preset2',
+					geometry : {
+						orientation : 'vertical'
+					},
+					scale : {
+						startValue : 0.02,
+						endValue : 0.58,
+						majorTick : {
+							showCalculatedTicks : false,
+						},
+					},
+					rangeContainer : {
+						//backgroundColor : 'none',
+					},
+					markers : [{
+						value : 0,
+						color : 'black',
+						offset : -5,
+						type : 'triangle',
+						length : 20,
+						width : 15,
+					}],
+				});
+
+				$("#bCaroteneGaugeContainer").dxLinearGauge({
+					preset : 'preset2',
+					geometry : {
+						orientation : 'vertical'
+					},
+					scale : {
+						startValue : 0.12,
+						endValue : 3.18,
+						majorTick : {
+							showCalculatedTicks : false,
+						},
+					},
+					rangeContainer : {
+						//backgroundColor : 'none',
+					},
+					markers : [{
+						value : 0,
+						color : 'black',
+						offset : -5,
+						type : 'triangle',
+						length : 20,
+						width : 15,
+					}],
+				});
+
+				$("#vitaminAGaugeContainer").dxLinearGauge({
+					preset : 'preset2',
+					geometry : {
+						orientation : 'vertical'
+					},
+					scale : {
+						startValue : 1.06,
+						endValue : 3.09,
+						majorTick : {
+							showCalculatedTicks : false,
+						},
+					},
+					rangeContainer : {
+						//backgroundColor : 'none',
+					},
+					markers : [{
+						value : 0,
+						color : 'black',
+						offset : -5,
+						type : 'triangle',
+						length : 20,
+						width : 15,
+					}],
+				});
+
+				$("#vitaminCGaugeContainer").dxLinearGauge({
+					preset : 'preset2',
+					geometry : {
+						orientation : 'vertical'
+					},
+					scale : {
+						startValue : 19.25,
+						endValue : 130.25,
+						majorTick : {
+							showCalculatedTicks : false,
+						},
+					},
+					rangeContainer : {
+						//backgroundColor : 'none',
+					},
+					markers : [{
+						value : 0,
+						color : 'black',
+						offset : -5,
+						type : 'triangle',
+						length : 20,
+						width : 15,
+					}],
+				});
+
+				$("#vitaminEGaugeContainer").dxLinearGauge({
+					preset : 'preset2',
+					geometry : {
+						orientation : 'vertical'
+					},
+					scale : {
+						startValue : 17.67,
+						endValue : 71.36,
+						majorTick : {
+							showCalculatedTicks : false,
+						},
+					},
+					rangeContainer : {
+						//backgroundColor : 'none',
+					},
+					markers : [{
+						value : 0,
+						color : 'black',
+						offset : -5,
+						type : 'triangle',
+						length : 20,
+						width : 15,
+					}],
+				});
+
+				$("#vitEderivativeGaugeContainer").dxLinearGauge({
+					preset : 'preset2',
+					geometry : {
+						orientation : 'vertical'
+					},
+					scale : {
+						startValue : 0.51,
+						endValue : 8.23,
+						majorTick : {
+							showCalculatedTicks : false,
+						},
+					},
+					rangeContainer : {
+						//backgroundColor : 'none',
+					},
+					markers : [{
+						value : 0,
+						color : 'black',
+						offset : -5,
+						type : 'triangle',
+						length : 20,
+						width : 15,
+					}],
+				});
+			})
+			$(function() {
+				$('#sodInput').keyup(function() {
+					var guage = $('#sodGaugeContainer').dxLinearGauge('instance');
+					guage.markerValue(0, this.value);
+				})
+
+				$('#coenzymeInput').keyup(function() {
+					var guage = $('#coenzymeGaugeContainer').dxLinearGauge('instance');
+					guage.markerValue(0, this.value);
+				})
+
+				$('#lycopeneInput').keyup(function() {
+					var guage = $('#lycopeneGaugeContainer').dxLinearGauge('instance');
+					guage.markerValue(0, this.value);
+				})
+
+				$('#aCaroteneInput').keyup(function() {
+					var guage = $('#aCaroteneGaugeContainer').dxLinearGauge('instance');
+					guage.markerValue(0, this.value);
+				})
+
+				$('#bCaroteneInput').keyup(function() {
+					var guage = $('#bCaroteneGaugeContainer').dxLinearGauge('instance');
+					guage.markerValue(0, this.value);
+				})
+
+				$('#vitaminAInput').keyup(function() {
+					var guage = $('#vitaminAGaugeContainer').dxLinearGauge('instance');
+					guage.markerValue(0, this.value);
+				})
+
+				$('#vitaminCInput').keyup(function() {
+					var guage = $('#vitaminCGaugeContainer').dxLinearGauge('instance');
+					guage.markerValue(0, this.value);
+				})
+
+				$('#vitaminEInput').keyup(function() {
+					var guage = $('#vitaminEGaugeContainer').dxLinearGauge('instance');
+					guage.markerValue(0, this.value);
+				})
+
+				$('#vitEderivativeInput').keyup(function() {
+					var guage = $('#vitEderivativeGaugeContainer').dxLinearGauge('instance');
+					guage.markerValue(0, this.value);
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td width="75px"></td>
+				<td width="75px">
+				<div style="[position: relative]">
+					<div style="float:left;margin-top: 7px;z-index: -10">
+						<img src="image/sod.png" />
+					</div>
+					<div id="sodGaugeContainer" style="float:left;height:133px;width:70px;z-index: 10;margin-left:-70px"></div>
+				</div></td>
+				<td width="75px">
+				<div>
+					<div style="float:left;margin-top: 7px;z-index: -10">
+						<img src="image/coenzyme.png" />
+					</div>
+					<div id="coenzymeGaugeContainer" style="float:left;height:133px;width:70px;z-index: 10;margin-left:-70px"></div>
+				</div></td>
+				<td width="75px">
+				<div>
+					<div style="float:left;margin-top: 7px;z-index: -10">
+						<img src="image/lycopene.png" />
+					</div>
+					<div id="lycopeneGaugeContainer" style="float:left;height:133px;width:70px;z-index: 10;margin-left:-70px"></div>
+				</div></td>
+				<td width="75px">
+				<div>
+					<div style="float:left;margin-top: 7px;z-index: -10">
+						<img src="image/aCarotene.png" />
+					</div>
+					<div id="aCaroteneGaugeContainer" style="float:left;height:133px;width:70px;z-index: 10;margin-left:-70px"></div>
+				</div></td>
+				<td width="75px">
+				<div>
+					<div style="float:left;margin-top: 7px;z-index: -10">
+						<img src="image/bCarotene.png" />
+					</div>
+					<div id="bCaroteneGaugeContainer" style="float:left;height:133px;width:70px;z-index: 10;margin-left:-70px"></div>
+				</div></td>
+				<td width="75px">
+				<div>
+					<div style="float:left;margin-top: 7px;z-index: -10">
+						<img src="image/vitaminA.png" />
+					</div>
+					<div id="vitaminAGaugeContainer" style="float:left;height:133px;width:70px;z-index: 10;margin-left:-70px"></div>
+				</div></td>
+				<td width="75px">
+				<div>
+					<div style="float:left;margin-top: 7px;z-index: -10">
+						<img src="image/vitaminC.png" />
+					</div>
+					<div id="vitaminCGaugeContainer" style="float:left;height:133px;width:70px;z-index: 10;margin-left:-78px"></div>
+				</div></td>
+				<td width="75px">
+				<div>
+					<div style="float:left;margin-top: 7px;z-index: -10">
+						<img src="image/vitaminE.png" />
+					</div>
+					<div id="vitaminEGaugeContainer" style="float:left;height:133px;width:70px;z-index: 10;margin-left:-74px"></div>
+				</div></td>
+				<td width="75px">
+				<div>
+					<div style="float:left;margin-top: 7px;z-index: -10">
+						<img src="image/vitEderivative.png" />
+					</div>
+					<div id="vitEderivativeGaugeContainer" style="float:left;height:133px;width:70px;z-index: 10;margin-left:-70px"></div>
+				</div></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td style="font-weight: bold">SOD</td>
+				<td style="font-weight: bold">CoEnzyme
+				<br />
+				Q10</td>
+				<td style="font-weight: bold">Lycopene</td>
+				<td style="font-weight: bold">a-Carotene</td>
+				<td style="font-weight: bold">b-Carotene</td>
+				<td style="font-weight: bold">Vitamin A</td>
+				<td style="font-weight: bold">Vitamin C</td>
+				<td style="font-weight: bold">Vitamin E
+				<br />
+				a-tocopherol</td>
+				<td style="font-weight: bold">Vit E derivative
+				<br />
+				g-tocopherol</td>
+			</tr>
+			<tr>
+				<td style="font-weight: bold">Results (mM)</td>
+				<td>
+				<input id="sodInput" size="3"  type="text"/>
+				</td>
+				<td>
+				<input id="coenzymeInput" size="3"  type="text"/>
+				</td>
+				<td>
+				<input id="lycopeneInput" size="3"  type="text"/>
+				</td>
+				<td>
+				<input id="aCaroteneInput" size="3"  type="text"/>
+				</td>
+				<td>
+				<input id="bCaroteneInput" size="3"  type="text"/>
+				</td>
+				<td>
+				<input id="vitaminAInput" size="3"  type="text"/>
+				</td>
+				<td>
+				<input id="vitaminCInput" size="3"  type="text"/>
+				</td>
+				<td>
+				<input id="vitaminEInput" size="3"  type="text"/>
+				</td>
+				<td>
+				<input id="vitEderivativeInput" size="3"  type="text"/>
+				</td>
+			</tr>
+			<tr>
+				<td style="font-weight: bold">Level</td>
+				<td><div id="sodLevel"></div></td>
+				<td><div id="coenzymeLevel"></div></td>
+				<td><div id="lycopeneLevel"></div></td>
+				<td><div id="aCaroteneLevel"></div></td>
+				<td><div id="bCaroteneLevel"></div></td>
+				<td><div id="vitaminALevel"></div></td>
+				<td><div id="vitaminCLevel"></div></td>
+				<td><div id="vitaminELevel"></div></td>
+				<td><div id="vitEderivativeLevel"></div></td>
+			</tr>
+			<tr>
+				<td>Units</td>
+				<td>ng/ml</td>
+				<td>pg/ml</td>
+				<td>ng/mL</td>
+				<td>mg/dL</td>
+				<td>ug/dl</td>
+				<td>ng/ml</td>
+				<td>mg/dl</td>
+				<td>ug/l</td>
+				<td>ug/dl</td>
+			</tr>
+			<tr>
+				<td style="font-weight: bold">Normal Range</td>
+			</tr>
+			<tr>
+				<td>Lower Limit</td>
+				<td>164</td>
+				<td>0.18</td>
+				<td>0.11</td>
+				<td>0.02</td>
+				<td>0.12</td>
+				<td>1.06</td>
+				<td>19.25</td>
+				<td>17.67</td>
+				<td>0.51</td>
+			</tr>
+			<tr>
+				<td>Upper Limit</td>
+				<td>240</td>
+				<td>2.70</td>
+				<td>1.37</td>
+				<td>0.58</td>
+				<td>3.18</td>
+				<td>3.09</td>
+				<td>130.25</td>
+				<td>71.36</td>
+				<td>8.23</td>
+			</tr>
+		</table>
+	</body>
+</html>
+
